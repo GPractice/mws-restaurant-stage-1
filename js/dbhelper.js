@@ -26,8 +26,8 @@ class DBHelper {
   static get DATABASE_URL() {
   //  const port = 8000 // Change this to your server port
   //  return `http://localhost:${port}/data/restaurants.json`;
-    const port = `https://github.com/GPractice/mws-restaurant-stage-1/data/restaurants.json`;
-    return port;
+    const port = `gpractice.github.io/mws-restaurant-stage-1`;
+    return `http://localhost:${port}/data/restaurants.json`;
    
   }
 
