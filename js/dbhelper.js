@@ -13,7 +13,21 @@ if ('serviceWorker' in navigator)
     }); 
   }); 
 }
-
+/*
+--> result sw.js file in root folder the same as index.html and restaurant.html
+*/
+/*
+if ('serviceWorker' in navigator) 
+  { window.addEventListener('load', function() { 
+    navigator.serviceWorker.register('/sw.js', scope:{'js/'} ).then(function(registration) { 
+    // Registration was successful 
+    console.log('ServiceWorker registration successful with scope: ', registration.scope); 
+    }, function(err) { 
+    // registration failed :( 
+    console.log('ServiceWorker registration failed: ', err); 
+    }); 
+  }); 
+}
 /**
  * Common database helper functions.
  */
@@ -24,11 +38,8 @@ class DBHelper {
    * Change this to restaurants.json file location on your server.
    */
   static get DATABASE_URL() {
-  //  const port = 8000 // Change this to your server port
-  //  return `http://localhost:${port}/data/restaurants.json`;
-    const port = `gpractice.github.io/mws-restaurant-stage-1`;
+    const port = 3000 // Change this to your server port
     return `http://localhost:${port}/data/restaurants.json`;
-   
   }
 
   /**
